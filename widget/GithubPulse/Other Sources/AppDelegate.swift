@@ -35,6 +35,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   }
   
+  required convenience init?(coder: NSCoder) {
+    self.init()
+  }
+  
   func applicationDidFinishLaunching(aNotification: NSNotification) {
     self.statusButton = CustomButton(frame: NSRect(x: 0, y: 0, width: 32, height: 24))
     self.statusButton.bordered = false
